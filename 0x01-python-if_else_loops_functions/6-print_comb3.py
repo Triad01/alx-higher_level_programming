@@ -6,6 +6,3 @@ for tens in range(10):
             print("{:d}{:d}".format(tens, ones))
         else:
             print("{:d}{:d}, ".format(tens, ones), end='')
-
-print()
-
