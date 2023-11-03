@@ -7,3 +7,4 @@ for char_code in range(ord('z'), ord('a') - 1, -1):
     else:
         # Print uppercase character
         print(char.upper(), end='')
+print()
