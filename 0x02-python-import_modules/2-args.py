@@ -30,4 +30,3 @@ if __name__ == "__main__":
     for num in range(list_length):
 
         print(f"{num + 1}: {my_list[num]}")
-
