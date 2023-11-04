@@ -1,30 +1,33 @@
 #!/usr/bin/python3
 import sys
 
-my_list = sys.argv
+if __name__ == "__main__":
 
-my_list.pop(0)
+    my_list = sys.argv
 
-list_length = len(my_list)
+    my_list.pop(0)
 
-arg = ""
+    list_length = len(my_list)
 
-if list_length == 0:
+    arg = ""
 
-    arg = "arguments" + "."
+    if list_length == 0:
 
-elif list_length == 1:
+        arg = "arguments" + "."
 
-    arg = "argument" + ":"
+    elif list_length == 1:
 
-else:
+        arg = "argument" + ":"
 
-    arg = "arguments" + ":"
+    else:
 
-print(f"{list_length} {arg}")
+        arg = "arguments" + ":"
 
-length = list_length + 1
+    print(f"{list_length} {arg}")
 
-for num in range(list_length):
+    length = list_length + 1
 
-    print(f"{num + 1}: {my_list[num]}")
+    for num in range(list_length):
+
+        print(f"{num + 1}: {my_list[num]}")
+
