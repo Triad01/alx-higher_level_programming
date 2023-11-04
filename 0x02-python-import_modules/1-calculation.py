@@ -8,7 +8,8 @@ my_sub = sub(a, b)
 my_mul = mul(a, b)
 my_div = div(a, b)
 
-print("{} + {} = {}".format(a, b, my_sum))
-print("{} - {} = {}".format(a, b, my_sub))
-print("{} * {} = {}".format(a, b, my_mul))
-print("{} / {} = {}".format(a, b, my_div))
+if __name__ == '__main__':
+    print("{} + {} = {}".format(a, b, my_sum))
+    print("{} - {} = {}".format(a, b, my_sub))
+    print("{} * {} = {}".format(a, b, my_mul))
+    print("{} / {} = {}".format(a, b, my_div))
