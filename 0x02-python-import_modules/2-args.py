@@ -7,15 +7,19 @@ my_list.pop(0)
 
 list_length = len(my_list)
 
-arg = "arguments:"
+arg = ""
 
-if list_length == 1:
+if list_length == 0:
 
-    arg = "argument:"
+    arg = "arguments" + "."
 
-elif list_length == 0:
+elif list_length == 1:
 
-    arg = "arguments."
+    arg = "argument" + ":"
+
+else:
+
+    arg = "arguments" + ":"
 
 print(f"{list_length} {arg}")
 
