@@ -7,10 +7,11 @@ def max_integer(my_list=[]):
 
         return None
 
-    for num in my_list:
+    if my_list:
+        for num in my_list:
 
-        if num > max_num:
+            if num > max_num:
 
-            max_num = num
+                max_num = num
 
-    return (max_num)
+        return (max_num)
