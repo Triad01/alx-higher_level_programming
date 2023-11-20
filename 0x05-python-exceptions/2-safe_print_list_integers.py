@@ -14,7 +14,5 @@ def safe_print_list_integers(my_list=[], x=0):
 
         print()
         return no_of_int
-
-    except (IndexError):
-        print()
+    except (IndexError, TypeError, ValueError):
         return no_of_int
