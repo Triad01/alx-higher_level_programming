@@ -1,12 +1,23 @@
 #!/usr/bin/python3
 def safe_print_list_integers(my_list=[], x=0):
-    count = 0
-    for i in range(x):
-        try:
-            if type(my_list[i]) is int:
+
+    no_of_int = 0
+
+    try:
+        for i in range(x):
+
+            if isinstance(my_list[i], int):
+
                 print("{:d}".format(my_list[i]), end="")
-                count += 1
-        except IndexError:
-            break
-    print()
-    return count
+
+                no_of_int += 1
+
+        print()
+
+        return no_of_int
+
+    except IndexError:
+
+        print()
+
+        return no_of_int
