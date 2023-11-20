@@ -2,16 +2,10 @@
 def safe_print_integer(value):
 
     try:
-        if isinstance(value, int):
+        print("{:d}".format(value))
 
-            print(value)
-
-            return True
-
-        elif isinstance(value, str):
-
-            return False
+        return True
 
     except (TypeError, ValueError):
 
-        return "Type Error"
+        return False
