@@ -3,7 +3,11 @@ import math
 
 
 class MagicClass:
-    """A class with magical properties."""
+    """A class with magical properties.
+
+    Attributes:
+        __radius (float or int): The radius of the magical circle.
+    """
 
     def __init__(self, radius=0):
         """Initialize the MagicClass instance with a radius.
@@ -11,12 +15,13 @@ class MagicClass:
         Args:
             radius (float or int): D radius of magical circle. Default is 0.
                 It must be a number (float or integer).
+
         Raises:
             TypeError: If radius is not a number.
         """
         self.__radius = 0
 
-        if type(radius) is not int and type(radius) is not float:
+        if type(radius) not in (int, float):
             raise TypeError('radius must be a number')
 
         self.__radius = radius
