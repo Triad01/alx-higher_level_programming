@@ -16,17 +16,12 @@ class Rectangle:
         self.height = height
 
     def __str__(self):
-        empty_string = ""
         if self.__width == 0 or self.__height == 0:
-            return empty_string
-        return ((('#' * self.width) + "\n") * self.height)[:-1]
-
-    def __repr__(self):
-        empty_string = ""
-        if self.__width == 0 or self.__height == 0:
-            return empty_string
-
-        return f"<3-{type(self).__name__} object at {hex(id(self))}>"
+            return ""
+        rectangle_str = ""
+        for _ in range(self.__height):
+            rectangle_str += "#" * self.__width + "\n"
+        return rectangle_str[:-1]
 
     @property
     def width(self):
