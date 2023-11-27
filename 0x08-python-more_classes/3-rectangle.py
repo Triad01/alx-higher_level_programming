@@ -25,7 +25,8 @@ class Rectangle:
         empty_string = ""
         if self.__width == 0 or self.__height == 0:
             return empty_string
-        return "<{} object at {}>".format(type(self).__name__, hex(id(self)))
+
+        return f"<3-{type(self).__name__} object at {hex(id(self))}>"
 
     @property
     def width(self):
