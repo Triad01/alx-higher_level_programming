@@ -80,13 +80,10 @@ class Rectangle:
         rect1_area = rect_1.area()
         rect2_area = rect_2.area()
 
-        if rect1_area > rect2_area:
+        if rect1_area >= rect2_area:
 
             return rect_1
-
-        elif rect1_area < rect2_area:
-
-            return rect_2
 
         else:
-            return rect_1
+
+            return rect_2
