@@ -22,3 +22,22 @@ Testcase3: testing sorting function
 Testcase4: testing to check if original list was modified
 >>> print(my_list)
 [1, 4, 2, 3, 5]
+
+Testcase5:
+>>> my_list.append(10)
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5, 10]
+
+Testcase6: testing with  0
+>>> my_list.append(0)
+>>> my_list.print_sorted()
+[0, 1, 2, 3, 4, 5, 10]
+
+Testcase7: testing with negativ integer
+>>> my_list.append(-11)
+>>> my_list.print_sorted()
+[-11, 0, 1, 2, 3, 4, 5, 10]
+
+Testcase8: testintg to check whether original list modified
+>>> print(my_list)
+[1, 4, 2, 3, 5, 10, 0, -11]
