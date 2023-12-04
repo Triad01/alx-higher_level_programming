@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-""" This module contains some classeses with some methods"""
+""" New class """
 Rectangle = __import__("9-rectangle").Rectangle
 
 
 class Square(Rectangle):
-    """inherits from rectangle"""
+    """ Class square inherist from rectangle """
     def __init__(self, size):
         self.integer_validator("size", size)
         self.__size = size
