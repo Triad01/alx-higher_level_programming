@@ -41,3 +41,9 @@ Testcase7: testing with negativ integer
 Testcase8: testintg to check whether original list modified
 >>> print(my_list)
 [1, 4, 2, 3, 5, 10, 0, -11]
+
+Testcase9:
+>>> my_list = [1, 10, 2, 3]
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+AttributeError: 'list' object has no attribute 'print_sorted'
