@@ -7,4 +7,3 @@ def read_file(filename=""):
     with open(filename, "r") as my_file:
         data = my_file.read()
         print(data)
-        my_file.close()
