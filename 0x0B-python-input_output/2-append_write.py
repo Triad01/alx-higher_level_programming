@@ -1,4 +1,4 @@
-#!/usr/bin/pythond
+#!/usr/bin/python3
 """appends to file"""
 
 
