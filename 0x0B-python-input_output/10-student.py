@@ -12,8 +12,12 @@ class Student:
 
     def to_json(self, attrs=None):
 
-        if attrs is None or not isinstance(attrs, list):
+        if attrs is None:
 
             return self.__dict__
         else:
-            return {attr: getattr(self, attr, None) for attr in attrs}
+            dic = {}
+            for attr in attrs:
+                if hasattr(self, attr):
+                    dic[attr] = getattr(self, attr)
+            return (dic)
