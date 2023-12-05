@@ -2,6 +2,7 @@
 """create json from file"""
 import json
 
+
 def load_from_json_file(filename):
     """creates a json object from a file
         Args:
