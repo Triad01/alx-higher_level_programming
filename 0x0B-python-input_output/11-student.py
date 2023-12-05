@@ -22,9 +22,6 @@ class Student:
                     dic[attr] = getattr(self, attr)
             return (dic)
 
-        def reload_from_json(self, json):
-            """ Replaces all attributes of the Student instance"""
-
-            save = vars(self)
-            for key, value in json.items():
-                save[key] = value
+    def reload_from_json(self, json):
+        for key, value in json.items():
+            setattr(self, key, value)
