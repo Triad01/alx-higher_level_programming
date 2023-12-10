@@ -3,7 +3,7 @@ from models.rectangle import Rectangle
 from io import StringIO
 import sys
 
-class TestRectangle(unittest.TestCase):
+class TestSquare(unittest.TestCase):
 
     r3 = Rectangle(10, 2, 0, 0, 12)
     r4 = Rectangle(1, 2, 3, 4, "5")
@@ -12,8 +12,8 @@ class TestRectangle(unittest.TestCase):
     r7 = Rectangle(1, 2, 0, 4, 5)
     r8 = Rectangle(1, 2, 3, 0, 5)
     my_obj = Rectangle(1, 2, 3, 4, 5)
-    obj = Rectangle(10, 10, 10, 10) #iteration of id here..now 5
-   
+    obj = Rectangle(10, 10, 10, 10)
+
     def setUp(self):
         self.obj = Rectangle(1, 2, 3, 4, 5)
 
@@ -33,8 +33,7 @@ class TestRectangle(unittest.TestCase):
 
         self.assertEqual(self.r6.id, -1)
 
-
-    #Error handling for width
+       #Error handling for width
     def test_width_not_int(self):
 
         with self.assertRaises(TypeError):
@@ -62,7 +61,7 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             Rectangle(1, 0, 3, 4, 5)
 
-    #Error handling cases for x ===============================
+      #Error handling cases for x ===============================
 
     def test_x_not_int(self):
         with self.assertRaises(TypeError):
@@ -89,7 +88,7 @@ class TestRectangle(unittest.TestCase):
     def test_y_zero(self):
         self.assertEqual(self.r8.y, 0)
 
-    #Test for area ==========================
+     #Test for area ==========================
     def test_2_int(self):
         my_obj = Rectangle(1, 2, 3, 4, 5)
         self.assertEqual(self.my_obj.area(), 2)
@@ -119,24 +118,6 @@ class TestRectangle(unittest.TestCase):
             my_obj = Rectangle(1.5, 2.5, 3, 4, 5)
             my_obj.area()
 
-    #Test for display function========================
-    """
-    def test_display(self):
-        my_obj = Rectangle(3, 2, 3, 4, 5)
-
-        # Redirect stdout to capture printed output
-        captured_output = StringIO()
-        sys.stdout = captured_output
-
-        try:
-            my_obj.display()
-            printed_result = captured_output.getvalue().rstrip("\n")
-        finally:
-            # Restore stdout
-            sys.stdout = sys.__stdout__
-
-        self.assertEqual(printed_result, "###\n###")
-"""
     def test_display_1(self):
         my_obj = Rectangle(1, 1)
 
@@ -157,8 +138,9 @@ class TestRectangle(unittest.TestCase):
         obj = Rectangle(4, 6, 2, 1, 12)
         self.assertEqual(obj.__str__(), "[Rectangle] (12) 2/1 - 4/6")
 
-    #Test for update method==============
-    
+
+     #Test for update method==============
+
 
     def test_update_id(self):
         self.obj.update(id=89)

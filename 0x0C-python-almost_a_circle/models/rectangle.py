@@ -82,15 +82,37 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
+        """print the rectangle with # character"""
+        for row in range(self.y):
+            print()
+        for col in range(self.height):
+            for space in range(self.x):
+                print(" ", end="")
+            for symbol in range(self.width):
+                print("#", end="")
+            print()
 
-        shape = ""
+    def __str__(self):
+        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - \
+{self.__width}/{self.__height}"
 
-        for col in range(self.__height):
+    def update(self, *args, **kwargs):
+        if args:
+            attr_names = ["id", "width", "height", "x", "y"]
 
-            for row in range(self.__width):
+            for i in range(len(attr_names)):
+                if i < len(attr_names):
+                    setattr(self, attr_names[i], args[i])
 
-                shape += "#"
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
-            shape += "\n"
-
-        print(shape.rstrip("\n"))
+    def to_dictionary(self):
+        return {
+            "x": self.x,
+            "y": self.y,
+            "id": self.id,
+            "height": self.height,
+            "width": self.width
+        }
