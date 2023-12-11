@@ -4,7 +4,14 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """This defines the rectangle class"""
+    """This defines the rectangle class
+        Args:
+            width: width of the rectangle
+            height: height of the rectangle
+            x: x coordinate
+            y: y coordinate
+            id: the id
+    """
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
         self.width = width
@@ -97,6 +104,7 @@ class Rectangle(Base):
 {self.__width}/{self.__height}"
 
     def update(self, *args, **kwargs):
+        """an updater for the rectangle class"""
         if args:
             attr_names = ["id", "width", "height", "x", "y"]
 
@@ -109,6 +117,7 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
     def to_dictionary(self):
+        """returns dictionatry representation"""
         return {
             "x": self.x,
             "y": self.y,

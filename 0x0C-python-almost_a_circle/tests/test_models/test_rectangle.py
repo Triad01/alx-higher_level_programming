@@ -3,6 +3,7 @@ from models.rectangle import Rectangle
 from io import StringIO
 import sys
 
+
 class TestRectangle(unittest.TestCase):
 
     r3 = Rectangle(10, 2, 0, 0, 12)
@@ -12,8 +13,8 @@ class TestRectangle(unittest.TestCase):
     r7 = Rectangle(1, 2, 0, 4, 5)
     r8 = Rectangle(1, 2, 3, 0, 5)
     my_obj = Rectangle(1, 2, 3, 4, 5)
-    obj = Rectangle(10, 10, 10, 10) #iteration of id here..now 5
-   
+    obj = Rectangle(10, 10, 10, 10)  # iteration of id here..now 5
+
     def setUp(self):
         self.obj = Rectangle(1, 2, 3, 4, 5)
 
@@ -33,8 +34,7 @@ class TestRectangle(unittest.TestCase):
 
         self.assertEqual(self.r6.id, -1)
 
-
-    #Error handling for width
+    # Error handling for width
     def test_width_not_int(self):
 
         with self.assertRaises(TypeError):
@@ -48,7 +48,7 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             Rectangle(0, 2, 3, 4, 5)
 
-    #Error handling cases for height ====================================
+    # Error handling cases for height ====================================
 
     def test_height_not_int(self):
         with self.assertRaises(TypeError):
@@ -62,7 +62,7 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             Rectangle(1, 0, 3, 4, 5)
 
-    #Error handling cases for x ===============================
+    # Error handling cases for x ===============================
 
     def test_x_not_int(self):
         with self.assertRaises(TypeError):
@@ -80,16 +80,14 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             Rectangle(1, 2, 3, -4, 5)
 
-
-    #Check for x and y values as 0 ===============================
-
+    # Check for x and y values as 0 ===============================
     def test_x_zero(self):
         self.assertEqual(self.r7.x, 0)
 
     def test_y_zero(self):
         self.assertEqual(self.r8.y, 0)
 
-    #Test for area ==========================
+    # Test for area ==========================
     def test_2_int(self):
         my_obj = Rectangle(1, 2, 3, 4, 5)
         self.assertEqual(self.my_obj.area(), 2)
@@ -119,7 +117,7 @@ class TestRectangle(unittest.TestCase):
             my_obj = Rectangle(1.5, 2.5, 3, 4, 5)
             my_obj.area()
 
-    #Test for display function========================
+    # Test for display function========================
     """
     def test_display(self):
         my_obj = Rectangle(3, 2, 3, 4, 5)
@@ -151,15 +149,12 @@ class TestRectangle(unittest.TestCase):
 
         self.assertEqual(printed_result, "#")
 
-    #Test for __str__ =============================
-
+    # Test for __str__ =============================
     def test_str(self):
         obj = Rectangle(4, 6, 2, 1, 12)
         self.assertEqual(obj.__str__(), "[Rectangle] (12) 2/1 - 4/6")
 
-    #Test for update method==============
-    
-
+    # Test for update method==============
     def test_update_id(self):
         self.obj.update(id=89)
         self.assertEqual(self.obj.id, 89)
@@ -179,6 +174,7 @@ class TestRectangle(unittest.TestCase):
     def test_update_y(self):
         self.obj.update(id=89, width=2, height=3, x=4, y=5)
         self.assertEqual(self.obj.y, 5)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -37,5 +37,6 @@ class TestBase(unittest.TestCase):
     def test_id_0(self):
         self.assertEqual(self.b8.id, 0)
 
+
 if __name__ == "__main__":
     unittest.main()
