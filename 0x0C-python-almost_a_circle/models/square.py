@@ -13,10 +13,12 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """getter function for the size"""
         return f"{self.width}"
 
     @size.setter
     def size(self, value):
+        """setter for the size"""
 
         if not isinstance(value, int):
 
@@ -30,7 +32,7 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
-
+        """update function"""
         if args:
             if len(args) > 0:
                 self.id = args[0]
@@ -47,6 +49,7 @@ class Square(Rectangle):
                 setattr(self, key, value)
 
     def to_dictionary(self):
+        """returns dictionary representatin of object"""
         return {
             "id": self.id,
             "x": self.x,
