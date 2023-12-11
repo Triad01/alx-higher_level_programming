@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-from models.rectangle import Rectangle
 """ module contains the Square class """
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
+        """init function for the square class"""
         super().__init__(size, size, x, y, id)
 
     def __str__(self):

@@ -28,6 +28,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """saves to file """
         if list_objs is None:
             return "[]"
 
@@ -52,6 +53,7 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
+        """creates a file"""
         if cls.__name__ == "Rectangle":
             dummy_instance = cls(1, 2)
 
@@ -84,6 +86,7 @@ class Base:
 
     @staticmethod
     def draw(list_rectangles, list_squares):
+        """draws all rectangles and squares"""
         turtle = Turtle()  # creating an instance of the Turtle class
 
         my_screen = Screen()  # instance of d screen class to pull up a window

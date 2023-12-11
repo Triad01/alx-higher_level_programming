@@ -6,13 +6,14 @@ from models.base import Base
 class Rectangle(Base):
     """This defines the rectangle class
         Args:
-            width: width of the rectangle
-            height: height of the rectangle
-            x: x coordinate
-            y: y coordinate
-            id: the id
+            width - width of the rectangle
+            height - height of the rectangle
+            x - x coordinate
+            y - y coordinate
+            id - the id
     """
     def __init__(self, width, height, x=0, y=0, id=None):
+        """init function of the rectangle class"""
         super().__init__(id)
         self.width = width
         self.height = height
@@ -20,10 +21,12 @@ class Rectangle(Base):
         self.y = y
 
     @property
+    """property getter"""
     def height(self):
         return self.__height
 
     @height.setter
+    """property setter"""
     def height(self, value):
 
         if not isinstance(value, int):
@@ -37,10 +40,12 @@ class Rectangle(Base):
         self.__height = value
 
     @property
+    """property getter for width"""
     def width(self):
         return self.__width
 
     @width.setter
+    """property setter for width"""
     def width(self, value):
 
         if not isinstance(value, int):
@@ -85,7 +90,7 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
-
+        """calculates area of the rectangle"""
         return self.__width * self.__height
 
     def display(self):
