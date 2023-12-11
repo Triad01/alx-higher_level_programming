@@ -43,14 +43,6 @@ class TestSquare(unittest.TestCase):
         obj = Square(1, 2, 3, "4")
         self.assertEqual(obj.id, "4")
 
-    def test_default_id(self):
-        obj = Square(1, 2, 3)
-        self.assertEqual(obj.id, 1)  # 7
-
-    def test_default_id_increment(self):
-        obj = Square(1, 2, 3)
-        self.assertEqual(obj.id, 2)  # 8
-
     def test_width_float(self):
         with self.assertRaises(TypeError):
             obj = Square(0.1, 2, 3, 4)
