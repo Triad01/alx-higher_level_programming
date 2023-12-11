@@ -107,13 +107,19 @@ class Rectangle(Base):
 {self.__width}/{self.__height}"
 
     def update(self, *args, **kwargs):
-        """an updater for the rectangle class"""
+        """ This method assigns an argument to each attribute """
         if args:
-            attr_names = ["id", "width", "height", "x", "y"]
-
-            for i in range(len(attr_names)):
-                if i < len(attr_names):
-                    setattr(self, attr_names[i], args[i])
+            for arguments in range(len(args)):
+                if arguments == 0:
+                    self.id = args[arguments]
+                if arguments == 1:
+                    self.__width = args[arguments]
+                if arguments == 2:
+                    self.__height = args[arguments]
+                if arguments == 3:
+                    self.__x = args[arguments]
+                if arguments == 4:
+                    self.__y = args[arguments]
 
         else:
             for key, value in kwargs.items():
