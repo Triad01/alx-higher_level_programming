@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+"""module contains test cases for the Rectangle class"""
 import unittest
 from models.rectangle import Rectangle
 from io import StringIO
@@ -5,6 +7,7 @@ import sys
 
 
 class TestRectangle(unittest.TestCase):
+    """tests for the rectangle class"""
 
     r3 = Rectangle(10, 2, 0, 0, 12)
     r4 = Rectangle(1, 2, 3, 4, "5")

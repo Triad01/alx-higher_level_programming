@@ -1,8 +1,11 @@
+#!/usr/bin/python3
+"""contains test cases for the base class"""
 import unittest
 from models.base import Base
 
 
 class TestBase(unittest.TestCase):
+    """test for the base class"""
 
     b1 = Base()
     b2 = Base()
