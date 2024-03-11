@@ -8,10 +8,10 @@ import sys
 
 if __name__ == '__main__':
 
-    response = requests.get('https://api.github.com/user',
+    r = requests.get('https://api.github.com/user',
                      auth=(sys.argv[1], sys.argv[2]))
-    json = response.json()
+    json = r.json()
     try:
         print(json['id'])
-    except:
+    except ValueError:
         print("None")
