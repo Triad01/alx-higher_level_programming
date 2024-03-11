@@ -1,10 +1,16 @@
 #!/usr/bin/python3
-# script fetches a url using requests package
+"""
+    Module implementing a pythin script to fetch
+    given url using requests package
 
+"""
 import requests
 
+
 if __name__ == "__main__":
-    response = requests.get("https://alx-intranet.hbtn.io/status")
+    url = 'https://alx-intranet.hbtn.io/status'
+    response = requests.get(url)
+
     print("Body response:")
-    print(f"\t -type:", format(type(response.text)))
-    print(f"\t -content: OK".format(response.text))
+    print("\t- type: {}".format(type(response.text)))
+    print("\t- content: {}".format(response.text))
