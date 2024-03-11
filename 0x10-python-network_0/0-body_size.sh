@@ -1,7 +1,3 @@
-#!/usr/bin/env bash
-# script takes a url and sends a request to the url
-# displays size of the boyd of the response in bytes
-
-URL=$1
-
-
+#!/bin/bash
+# takes url, sends url request, returns size of body of response
+curl -sI "$1" | grep "Content-Length:" | cut -d " " -f 2
